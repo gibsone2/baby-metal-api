@@ -5,7 +5,7 @@ const airtable = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
   .base(process.env.AIRTABLE_BASE)
   .table('products')
 
-exports.handler = async(event, contect) => {
+exports.handler = async(event, context) => {
     try {
         const {records} = await airtable.list()
         const products = records.map((product) => {
