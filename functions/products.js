@@ -12,7 +12,7 @@ exports.handler = async(event, context) => {
             const {id} = product 
             const {name, images, group} = product.fields
             const url = images[0].url 
-            return {id, name, url, group}
+            return {id, name, url, group, tour}
         })
         return {
             headers: {
